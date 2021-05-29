@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Thu May 27 23:45:08 2021
+# Process ID: 114252
+# Current directory: D:/desktop/2021-FPGA-Test-Dir/Lab5-DSP_HW/Test1/Test1.runs/design_1_axi_bram_ctrl_3_0_synth_1
+# Command line: vivado.exe -log design_1_axi_bram_ctrl_3_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_axi_bram_ctrl_3_0.tcl
+# Log file: D:/desktop/2021-FPGA-Test-Dir/Lab5-DSP_HW/Test1/Test1.runs/design_1_axi_bram_ctrl_3_0_synth_1/design_1_axi_bram_ctrl_3_0.vds
+# Journal file: D:/desktop/2021-FPGA-Test-Dir/Lab5-DSP_HW/Test1/Test1.runs/design_1_axi_bram_ctrl_3_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source design_1_axi_bram_ctrl_3_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:04 ; elapsed = 00:00:10 . Memory (MB): peak = 1092.625 ; gain = 0.000
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP design_1_axi_bram_ctrl_3_0, cache-ID = 18811c9112a87c45.
+INFO: [Common 17-206] Exiting Vivado at Thu May 27 23:45:48 2021...

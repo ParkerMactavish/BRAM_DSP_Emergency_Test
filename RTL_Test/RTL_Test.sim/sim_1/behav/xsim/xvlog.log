@@ -1,0 +1,4 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/desktop/2021-FPGA-Test-Dir/Lab5-DSP_HW/src/controller.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module controller
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/desktop/2021-FPGA-Test-Dir/Lab5-DSP_HW/src/testbench.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb

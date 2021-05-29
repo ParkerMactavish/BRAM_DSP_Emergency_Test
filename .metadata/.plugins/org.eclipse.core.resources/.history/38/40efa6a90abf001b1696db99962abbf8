@@ -1,0 +1,8 @@
+#include "xil_printf.h"
+#include "xparameters.h"
+#include "xil_io.h"
+
+int main() {
+	printf("First test BRAM1 reading from bram ctrl:\n");
+	printf(" 0: %x", Xil_In)
+}

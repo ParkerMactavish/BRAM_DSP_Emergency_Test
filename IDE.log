@@ -1,0 +1,19 @@
+00:30:27 INFO  : Launching XSCT server: xsct.bat -n  -interactive D:\desktop\2021-FPGA-Test-Dir\Lab5-DSP_HW\temp_xsdb_launch_script.tcl
+00:30:30 INFO  : Registering command handlers for Vitis TCF services
+00:30:35 INFO  : XSCT server has started successfully.
+00:30:40 INFO  : Platform repository initialization has completed.
+00:30:46 INFO  : plnx-install-location is set to ''
+00:30:46 INFO  : Successfully done setting XSCT server connection channel  
+00:30:46 INFO  : Successfully done query RDI_DATADIR 
+00:30:46 INFO  : Successfully done setting workspace for the tool. 
+00:33:12 INFO  : Result from executing command 'getProjects': design_1_wrapper
+00:33:12 INFO  : Result from executing command 'getPlatforms': 
+00:33:12 WARN  : An unexpected exception occurred in the module 'platform project logging'
+00:33:12 INFO  : Platform 'design_1_wrapper' is added to custom repositories.
+00:33:24 INFO  : Platform 'design_1_wrapper' is added to custom repositories.
+00:35:48 INFO  : Result from executing command 'getProjects': design_1_wrapper
+00:35:48 INFO  : Result from executing command 'getPlatforms': D:\desktop\2021-FPGA-Test-Dir\Lab5-DSP_HW\design_1_wrapper\export\design_1_wrapper\design_1_wrapper.xpfm|D:/desktop/2021-FPGA-Test-Dir/Lab5-DSP_HW/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm
+00:35:49 INFO  : Checking for BSP changes to sync application flags for project 'DSP_HW'...
+00:54:21 INFO  : Checking for BSP changes to sync application flags for project 'DSP_HW'...
+00:54:41 INFO  : Checking for BSP changes to sync application flags for project 'DSP_HW'...
+00:55:44 INFO  : Checking for BSP changes to sync application flags for project 'DSP_HW'...

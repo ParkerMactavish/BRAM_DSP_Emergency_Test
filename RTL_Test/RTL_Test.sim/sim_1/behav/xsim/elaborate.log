@@ -1,0 +1,20 @@
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 1435dbfcbcb14f9ebd2ac572cda58a8b --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 10 for port 'rd_addr_0' [D:/desktop/2021-FPGA-Test-Dir/Lab5-DSP_HW/src/testbench.v:27]
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 10 for port 'addr_1' [D:/desktop/2021-FPGA-Test-Dir/Lab5-DSP_HW/src/testbench.v:28]
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 5 for port 'dsp_inmode' [D:/desktop/2021-FPGA-Test-Dir/Lab5-DSP_HW/src/testbench.v:33]
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 4 for port 'dsp_alumode' [D:/desktop/2021-FPGA-Test-Dir/Lab5-DSP_HW/src/testbench.v:35]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "D:/desktop/2021-FPGA-Test-Dir/Lab5-DSP_HW/src/controller.v" Line 1. Module controller doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/desktop/2021-FPGA-Test-Dir/Lab5-DSP_HW/src/controller.v" Line 1. Module controller doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.controller
+Compiling module xil_defaultlib.tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_behav

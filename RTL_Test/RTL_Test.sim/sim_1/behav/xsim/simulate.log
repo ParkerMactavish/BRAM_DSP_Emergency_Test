@@ -1,0 +1,87 @@
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+                   0addr0:   0
+addr1:   0
+we:   X
+dsp_inmode: zzz00000
+dsp_opmode: 0000000
+dsp_alumode: zzzz0000
+===
+                  16addr0:   0
+addr1:   X
+we:   X
+dsp_inmode: zzz00010
+dsp_opmode: 0000101
+dsp_alumode: zzzz0000
+===
+                  25addr0:   0
+addr1:   2
+we:   0
+dsp_inmode: zzz00010
+dsp_opmode: 0000101
+dsp_alumode: zzzz0000
+===
+                  35addr0:   0
+addr1:   0
+we:   0
+dsp_inmode: zzz00010
+dsp_opmode: 0000101
+dsp_alumode: zzzz0000
+===
+                  65addr0:   0
+addr1:   3
+we:  15
+dsp_inmode: zzz00010
+dsp_opmode: 0000101
+dsp_alumode: zzzz0000
+===
+                  75addr0:   0
+addr1:   0
+we:   0
+dsp_inmode: zzz00010
+dsp_opmode: 0000101
+dsp_alumode: zzzz0000
+===
+                  76addr0:   0
+addr1:   0
+we:   0
+dsp_inmode: zzz00000
+dsp_opmode: 0000000
+dsp_alumode: zzzz0000
+===
+                  86addr0:  31
+addr1:   0
+we:   0
+dsp_inmode: zzz01010
+dsp_opmode: 0001010
+dsp_alumode: zzzz0010
+===
+                  95addr0:  31
+addr1:  16
+we:   0
+dsp_inmode: zzz01010
+dsp_opmode: 0001010
+dsp_alumode: zzzz0010
+===
+                 105addr0:  31
+addr1:   0
+we:   0
+dsp_inmode: zzz01010
+dsp_opmode: 0001010
+dsp_alumode: zzzz0010
+===
+                 135addr0:  31
+addr1:   8
+we:  15
+dsp_inmode: zzz01010
+dsp_opmode: 0001010
+dsp_alumode: zzzz0010
+===
+                 145addr0:  31
+addr1:   0
+we:   0
+dsp_inmode: zzz01010
+dsp_opmode: 0001010
+dsp_alumode: zzzz0010
+===
+$finish called at time : 146 ns : File "D:/desktop/2021-FPGA-Test-Dir/Lab5-DSP_HW/src/testbench.v" Line 57
