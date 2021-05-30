@@ -1,0 +1,10 @@
+11:56:27 **** Build of configuration Debug for project TestInstLat2_system ****
+make all 
+Generating bif file for the system project
+generate_system_bif.bat 2591 D:/desktop/2021-FPGA-Test-Dir/Lab5-DSP_HW/TestInstLat/design_1_wrapper_1/export/design_1_wrapper_1/design_1_wrapper_1.xpfm standalone_ps7_cortexa9_0 D:/desktop/2021-FPGA-Test-Dir/Lab5-DSP_HW/TestInstLat/TestInstLat2_system/Debug/system.bif
+sdcard_gen --xpfm D:/desktop/2021-FPGA-Test-Dir/Lab5-DSP_HW/TestInstLat/design_1_wrapper_1/export/design_1_wrapper_1/design_1_wrapper_1.xpfm --sys_config design_1_wrapper_1 --bif D:/desktop/2021-FPGA-Test-Dir/Lab5-DSP_HW/TestInstLat/TestInstLat2_system/Debug/system.bif --bitstream D:/desktop/2021-FPGA-Test-Dir/Lab5-DSP_HW/TestInstLat/TestInstLat2/_ide/bitstream/design_1_wrapper.bit --elf D:/desktop/2021-FPGA-Test-Dir/Lab5-DSP_HW/TestInstLat/TestInstLat2/Debug/TestInstLat2.elf,ps7_cortexa9_0
+creating BOOT.BIN using D:/desktop/2021-FPGA-Test-Dir/Lab5-DSP_HW/TestInstLat/TestInstLat2/_ide/bitstream/design_1_wrapper.bit
+Running D:/Xilinx/Vitis/2020.2/bin/bootgen  -image D:/desktop/2021-FPGA-Test-Dir/Lab5-DSP_HW/TestInstLat/TestInstLat2_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN
+
+11:56:34 Build Finished (took 7s.216ms)
+

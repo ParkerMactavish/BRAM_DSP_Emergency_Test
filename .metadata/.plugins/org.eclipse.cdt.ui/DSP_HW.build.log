@@ -1,4 +1,4 @@
-00:55:44 **** Incremental Build of configuration Debug for project DSP_HW ****
+10:44:00 **** Incremental Build of configuration Debug for project DSP_HW ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
@@ -26,39 +26,24 @@ arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cort
       |                        |             |
       |                        unsigned int  u32 {aka long unsigned int}
       |                       %lx
-../src/main.cpp:17:19: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
-   17 |   printf("\tWord %d: %x\n", Xil_In32(XPAR_AXI_BRAM_CTRL_2_S_AXI_BASEADDR + (i << 2)));
-      |                  ~^         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-      |                   |                 |
-      |                   int               u32 {aka long unsigned int}
-      |                  %ld
-../src/main.cpp:17:23: warning: format '%x' expects a matching 'unsigned int' argument [-Wformat=]
-   17 |   printf("\tWord %d: %x\n", Xil_In32(XPAR_AXI_BRAM_CTRL_2_S_AXI_BASEADDR + (i << 2)));
-      |                      ~^
-      |                       |
-      |                       unsigned int
-../src/main.cpp:20:19: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
-   20 |   printf("\tWord %d: %x\n", Xil_In32(XPAR_AXI_BRAM_CTRL_3_S_AXI_BASEADDR + (i << 2)));
-      |                  ~^         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-      |                   |                 |
-      |                   int               u32 {aka long unsigned int}
-      |                  %ld
-../src/main.cpp:20:23: warning: format '%x' expects a matching 'unsigned int' argument [-Wformat=]
-   20 |   printf("\tWord %d: %x\n", Xil_In32(XPAR_AXI_BRAM_CTRL_3_S_AXI_BASEADDR + (i << 2)));
-      |                      ~^
-      |                       |
-      |                       unsigned int
-../src/main.cpp:22:19: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
-   22 |   printf("\tWord %d: %x\n", Xil_In32(XPAR_AXI_BRAM_CTRL_4_S_AXI_BASEADDR + (i << 2)));
-      |                  ~^         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-      |                   |                 |
-      |                   int               u32 {aka long unsigned int}
-      |                  %ld
-../src/main.cpp:22:23: warning: format '%x' expects a matching 'unsigned int' argument [-Wformat=]
-   22 |   printf("\tWord %d: %x\n", Xil_In32(XPAR_AXI_BRAM_CTRL_4_S_AXI_BASEADDR + (i << 2)));
-      |                      ~^
-      |                       |
-      |                       unsigned int
+../src/main.cpp:17:23: warning: format '%x' expects argument of type 'unsigned int', but argument 3 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+   17 |   printf("\tWord %d: %x\n", i, Xil_In32(XPAR_AXI_BRAM_CTRL_2_S_AXI_BASEADDR + (i << 2)));
+      |                      ~^        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                       |                |
+      |                       unsigned int     u32 {aka long unsigned int}
+      |                      %lx
+../src/main.cpp:20:23: warning: format '%x' expects argument of type 'unsigned int', but argument 3 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+   20 |   printf("\tWord %d: %x\n", i, Xil_In32(XPAR_AXI_BRAM_CTRL_3_S_AXI_BASEADDR + (i << 2)));
+      |                      ~^        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                       |                |
+      |                       unsigned int     u32 {aka long unsigned int}
+      |                      %lx
+../src/main.cpp:22:23: warning: format '%x' expects argument of type 'unsigned int', but argument 3 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+   22 |   printf("\tWord %d: %x\n", i, Xil_In32(XPAR_AXI_BRAM_CTRL_4_S_AXI_BASEADDR + (i << 2)));
+      |                      ~^        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                       |                |
+      |                       unsigned int     u32 {aka long unsigned int}
+      |                      %lx
 'Finished building: ../src/main.cpp'
 ' '
 'Building target: DSP_HW.elf'
@@ -73,5 +58,5 @@ arm-none-eabi-size DSP_HW.elf  |tee "DSP_HW.elf.size"
 'Finished building: DSP_HW.elf.size'
 ' '
 
-00:55:45 Build Finished (took 1s.277ms)
+10:44:18 Build Finished (took 17s.287ms)
 

@@ -14,8 +14,8 @@ RAMB36E1 #(
 	// Collision check: Values ("ALL", "WARNING_ONLY", "GENERATE_X_ONLY" or "NONE")
 	.SIM_COLLISION_CHECK("ALL"),
 	// DOA_REG, DOB_REG: Optional output register (0 or 1)
-	.DOA_REG(1),
-	.DOB_REG(1),
+	.DOA_REG(0),
+	.DOB_REG(0),
 	.EN_ECC_READ("FALSE"), // Enable ECC decoder,
 	// FALSE, TRUE
 	.EN_ECC_WRITE("FALSE"), // Enable ECC encoder,

@@ -40,7 +40,6 @@ always @ (posedge clk, negedge reset) begin
             counter <= (counter == 5) ? counter : counter + 1;
         else
             counter <= 0;
-        endcase
     end
 end
 endmodule

@@ -1,0 +1,482 @@
+11:11:43 INFO  : Launching XSCT server: xsct.bat -n  -interactive D:\desktop\2021-FPGA-Test-Dir\Lab5-DSP_HW\TestInstLat\temp_xsdb_launch_script.tcl
+11:11:44 INFO  : Registering command handlers for Vitis TCF services
+11:11:49 INFO  : Platform repository initialization has completed.
+11:11:51 INFO  : XSCT server has started successfully.
+11:11:51 INFO  : Successfully done setting XSCT server connection channel  
+11:11:55 INFO  : plnx-install-location is set to ''
+11:11:55 INFO  : Successfully done setting workspace for the tool. 
+11:11:55 INFO  : Successfully done query RDI_DATADIR 
+11:13:04 INFO  : Result from executing command 'getProjects': design_1_wrapper
+11:13:04 INFO  : Result from executing command 'getPlatforms': 
+11:13:04 WARN  : An unexpected exception occurred in the module 'platform project logging'
+11:13:05 INFO  : Platform 'design_1_wrapper' is added to custom repositories.
+11:13:18 INFO  : Platform 'design_1_wrapper' is added to custom repositories.
+11:16:46 INFO  : Result from executing command 'getProjects': design_1_wrapper
+11:16:46 INFO  : Result from executing command 'getPlatforms': design_1_wrapper|D:/desktop/2021-FPGA-Test-Dir/Lab5-DSP_HW/TestInstLat/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm
+11:16:47 INFO  : Checking for BSP changes to sync application flags for project 'TestInstLat'...
+11:35:27 INFO  : Checking for BSP changes to sync application flags for project 'TestInstLat'...
+11:35:42 INFO  : Checking for BSP changes to sync application flags for project 'TestInstLat'...
+11:36:13 INFO  : Checking for BSP changes to sync application flags for project 'TestInstLat'...
+11:36:23 INFO  : Checking for BSP changes to sync application flags for project 'TestInstLat'...
+11:36:46 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:36:48 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+11:36:48 INFO  : 'jtag frequency' command is executed.
+11:36:48 INFO  : Context for 'APU' is selected.
+11:36:48 INFO  : System reset is completed.
+11:36:51 INFO  : 'after 3000' command is executed.
+11:36:51 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0 && jtag_device_ctx=="jsn-TUL-1234-tulA-23727093-0"}' command is executed.
+11:36:53 INFO  : Device configured successfully with "D:/desktop/2021-FPGA-Test-Dir/Lab5-DSP_HW/TestInstLat/TestInstLat/_ide/bitstream/design_1_wrapper.bit"
+11:36:53 INFO  : Context for 'APU' is selected.
+11:36:53 INFO  : Hardware design and registers information is loaded from 'D:/desktop/2021-FPGA-Test-Dir/Lab5-DSP_HW/TestInstLat/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+11:36:53 INFO  : 'configparams force-mem-access 1' command is executed.
+11:36:53 INFO  : Context for 'APU' is selected.
+11:36:53 INFO  : Sourcing of 'D:/desktop/2021-FPGA-Test-Dir/Lab5-DSP_HW/TestInstLat/TestInstLat/_ide/psinit/ps7_init.tcl' is done.
+11:36:54 INFO  : 'ps7_init' command is executed.
+11:36:54 INFO  : 'ps7_post_config' command is executed.
+11:36:54 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:36:54 INFO  : The application 'D:/desktop/2021-FPGA-Test-Dir/Lab5-DSP_HW/TestInstLat/TestInstLat/Debug/TestInstLat.elf' is downloaded to processor 'ps7_cortexa9_0'.
+11:36:54 INFO  : 'configparams force-mem-access 0' command is executed.
+11:36:54 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0 && jtag_device_ctx=="jsn-TUL-1234-tulA-23727093-0"}
+fpga -file D:/desktop/2021-FPGA-Test-Dir/Lab5-DSP_HW/TestInstLat/TestInstLat/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/desktop/2021-FPGA-Test-Dir/Lab5-DSP_HW/TestInstLat/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/desktop/2021-FPGA-Test-Dir/Lab5-DSP_HW/TestInstLat/TestInstLat/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/desktop/2021-FPGA-Test-Dir/Lab5-DSP_HW/TestInstLat/TestInstLat/Debug/TestInstLat.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+11:36:54 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:36:54 INFO  : 'con' command is executed.
+11:36:54 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+11:36:54 INFO  : Disconnected from the channel tcfchan#2.
+11:37:34 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:37:35 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+11:37:35 INFO  : 'jtag frequency' command is executed.
+11:37:35 INFO  : Context for 'APU' is selected.
+11:37:35 INFO  : System reset is completed.
+11:37:38 INFO  : 'after 3000' command is executed.
+11:37:38 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0 && jtag_device_ctx=="jsn-TUL-1234-tulA-23727093-0"}' command is executed.
+11:37:40 INFO  : Device configured successfully with "D:/desktop/2021-FPGA-Test-Dir/Lab5-DSP_HW/TestInstLat/TestInstLat/_ide/bitstream/design_1_wrapper.bit"
+11:37:40 INFO  : Context for 'APU' is selected.
+11:37:40 INFO  : Hardware design and registers information is loaded from 'D:/desktop/2021-FPGA-Test-Dir/Lab5-DSP_HW/TestInstLat/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+11:37:40 INFO  : 'configparams force-mem-access 1' command is executed.
+11:37:40 INFO  : Context for 'APU' is selected.
+11:37:40 INFO  : Sourcing of 'D:/desktop/2021-FPGA-Test-Dir/Lab5-DSP_HW/TestInstLat/TestInstLat/_ide/psinit/ps7_init.tcl' is done.
+11:37:41 INFO  : 'ps7_init' command is executed.
+11:37:41 INFO  : 'ps7_post_config' command is executed.
+11:37:41 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:37:41 INFO  : The application 'D:/desktop/2021-FPGA-Test-Dir/Lab5-DSP_HW/TestInstLat/TestInstLat/Debug/TestInstLat.elf' is downloaded to processor 'ps7_cortexa9_0'.
+11:37:41 INFO  : 'configparams force-mem-access 0' command is executed.
+11:37:41 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0 && jtag_device_ctx=="jsn-TUL-1234-tulA-23727093-0"}
+fpga -file D:/desktop/2021-FPGA-Test-Dir/Lab5-DSP_HW/TestInstLat/TestInstLat/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/desktop/2021-FPGA-Test-Dir/Lab5-DSP_HW/TestInstLat/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/desktop/2021-FPGA-Test-Dir/Lab5-DSP_HW/TestInstLat/TestInstLat/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/desktop/2021-FPGA-Test-Dir/Lab5-DSP_HW/TestInstLat/TestInstLat/Debug/TestInstLat.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+11:37:41 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:37:41 INFO  : 'con' command is executed.
+11:37:41 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+11:37:41 INFO  : Disconnected from the channel tcfchan#3.
+11:46:31 INFO  : Checking for BSP changes to sync application flags for project 'TestInstLat'...
+11:46:37 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:46:37 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+11:46:37 INFO  : 'jtag frequency' command is executed.
+11:46:37 INFO  : Context for 'APU' is selected.
+11:46:37 INFO  : System reset is completed.
+11:46:40 INFO  : 'after 3000' command is executed.
+11:46:40 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0 && jtag_device_ctx=="jsn-TUL-1234-tulA-23727093-0"}' command is executed.
+11:46:43 INFO  : Device configured successfully with "D:/desktop/2021-FPGA-Test-Dir/Lab5-DSP_HW/TestInstLat/TestInstLat/_ide/bitstream/design_1_wrapper.bit"
+11:46:43 INFO  : Context for 'APU' is selected.
+11:46:43 INFO  : Hardware design and registers information is loaded from 'D:/desktop/2021-FPGA-Test-Dir/Lab5-DSP_HW/TestInstLat/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+11:46:43 INFO  : 'configparams force-mem-access 1' command is executed.
+11:46:43 INFO  : Context for 'APU' is selected.
+11:46:43 INFO  : Sourcing of 'D:/desktop/2021-FPGA-Test-Dir/Lab5-DSP_HW/TestInstLat/TestInstLat/_ide/psinit/ps7_init.tcl' is done.
+11:46:43 INFO  : 'ps7_init' command is executed.
+11:46:43 INFO  : 'ps7_post_config' command is executed.
+11:46:43 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:46:43 INFO  : The application 'D:/desktop/2021-FPGA-Test-Dir/Lab5-DSP_HW/TestInstLat/TestInstLat/Debug/TestInstLat.elf' is downloaded to processor 'ps7_cortexa9_0'.
+11:46:43 INFO  : 'configparams force-mem-access 0' command is executed.
+11:46:43 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0 && jtag_device_ctx=="jsn-TUL-1234-tulA-23727093-0"}
+fpga -file D:/desktop/2021-FPGA-Test-Dir/Lab5-DSP_HW/TestInstLat/TestInstLat/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/desktop/2021-FPGA-Test-Dir/Lab5-DSP_HW/TestInstLat/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/desktop/2021-FPGA-Test-Dir/Lab5-DSP_HW/TestInstLat/TestInstLat/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/desktop/2021-FPGA-Test-Dir/Lab5-DSP_HW/TestInstLat/TestInstLat/Debug/TestInstLat.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+11:46:43 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:46:43 INFO  : 'con' command is executed.
+11:46:43 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+11:46:43 INFO  : Disconnected from the channel tcfchan#4.
+11:51:35 INFO  : Result from executing command 'getProjects': design_1_wrapper
+11:51:35 INFO  : Result from executing command 'getPlatforms': design_1_wrapper|D:/desktop/2021-FPGA-Test-Dir/Lab5-DSP_HW/TestInstLat/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm
+11:52:01 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:52:01 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+11:52:01 INFO  : 'jtag frequency' command is executed.
+11:52:01 INFO  : Context for 'APU' is selected.
+11:52:01 INFO  : System reset is completed.
+11:52:04 INFO  : 'after 3000' command is executed.
+11:52:04 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0 && jtag_device_ctx=="jsn-TUL-1234-tulA-23727093-0"}' command is executed.
+11:52:07 INFO  : Device configured successfully with "D:/desktop/2021-FPGA-Test-Dir/Lab5-DSP_HW/TestInstLat/TestInstLat/_ide/bitstream/design_1_wrapper.bit"
+11:52:07 INFO  : Context for 'APU' is selected.
+11:52:07 INFO  : Hardware design and registers information is loaded from 'D:/desktop/2021-FPGA-Test-Dir/Lab5-DSP_HW/TestInstLat/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+11:52:07 INFO  : 'configparams force-mem-access 1' command is executed.
+11:52:07 INFO  : Context for 'APU' is selected.
+11:52:07 INFO  : Sourcing of 'D:/desktop/2021-FPGA-Test-Dir/Lab5-DSP_HW/TestInstLat/TestInstLat/_ide/psinit/ps7_init.tcl' is done.
+11:52:07 INFO  : 'ps7_init' command is executed.
+11:52:07 INFO  : 'ps7_post_config' command is executed.
+11:52:07 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:52:07 INFO  : The application 'D:/desktop/2021-FPGA-Test-Dir/Lab5-DSP_HW/TestInstLat/TestInstLat/Debug/TestInstLat.elf' is downloaded to processor 'ps7_cortexa9_0'.
+11:52:07 INFO  : 'configparams force-mem-access 0' command is executed.
+11:52:07 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0 && jtag_device_ctx=="jsn-TUL-1234-tulA-23727093-0"}
+fpga -file D:/desktop/2021-FPGA-Test-Dir/Lab5-DSP_HW/TestInstLat/TestInstLat/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/desktop/2021-FPGA-Test-Dir/Lab5-DSP_HW/TestInstLat/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/desktop/2021-FPGA-Test-Dir/Lab5-DSP_HW/TestInstLat/TestInstLat/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/desktop/2021-FPGA-Test-Dir/Lab5-DSP_HW/TestInstLat/TestInstLat/Debug/TestInstLat.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+11:52:07 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:52:07 INFO  : 'con' command is executed.
+11:52:07 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+11:52:07 INFO  : Disconnected from the channel tcfchan#6.
+11:54:59 INFO  : Result from executing command 'getProjects': design_1_wrapper;design_1_wrapper_1
+11:54:59 INFO  : Result from executing command 'getPlatforms': design_1_wrapper|D:/desktop/2021-FPGA-Test-Dir/Lab5-DSP_HW/TestInstLat/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm
+11:54:59 INFO  : Platform 'design_1_wrapper_1' is added to custom repositories.
+11:55:08 INFO  : Platform 'design_1_wrapper_1' is added to custom repositories.
+11:56:25 INFO  : Result from executing command 'getProjects': design_1_wrapper;design_1_wrapper_1
+11:56:25 INFO  : Result from executing command 'getPlatforms': D:\desktop\2021-FPGA-Test-Dir\Lab5-DSP_HW\TestInstLat\design_1_wrapper_1\export\design_1_wrapper_1\design_1_wrapper_1.xpfm|D:/desktop/2021-FPGA-Test-Dir/Lab5-DSP_HW/TestInstLat/design_1_wrapper_1/export/design_1_wrapper_1/design_1_wrapper_1.xpfm;design_1_wrapper|D:/desktop/2021-FPGA-Test-Dir/Lab5-DSP_HW/TestInstLat/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm
+11:56:25 INFO  : Checking for BSP changes to sync application flags for project 'TestInstLat2'...
+11:56:51 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:56:51 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+11:56:51 INFO  : 'jtag frequency' command is executed.
+11:56:51 INFO  : Context for 'APU' is selected.
+11:56:51 INFO  : System reset is completed.
+11:56:54 INFO  : 'after 3000' command is executed.
+11:56:56 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0 && jtag_device_ctx=="jsn-TUL-1234-tulA-23727093-0"}' command is executed.
+11:56:59 INFO  : Device configured successfully with "D:/desktop/2021-FPGA-Test-Dir/Lab5-DSP_HW/TestInstLat/TestInstLat/_ide/bitstream/design_1_wrapper.bit"
+11:56:59 INFO  : Context for 'APU' is selected.
+11:56:59 INFO  : Hardware design and registers information is loaded from 'D:/desktop/2021-FPGA-Test-Dir/Lab5-DSP_HW/TestInstLat/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+11:56:59 INFO  : 'configparams force-mem-access 1' command is executed.
+11:56:59 INFO  : Context for 'APU' is selected.
+11:56:59 INFO  : Sourcing of 'D:/desktop/2021-FPGA-Test-Dir/Lab5-DSP_HW/TestInstLat/TestInstLat/_ide/psinit/ps7_init.tcl' is done.
+11:56:59 INFO  : 'ps7_init' command is executed.
+11:56:59 INFO  : 'ps7_post_config' command is executed.
+11:56:59 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:56:59 INFO  : The application 'D:/desktop/2021-FPGA-Test-Dir/Lab5-DSP_HW/TestInstLat/TestInstLat/Debug/TestInstLat.elf' is downloaded to processor 'ps7_cortexa9_0'.
+11:56:59 INFO  : 'configparams force-mem-access 0' command is executed.
+11:56:59 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0 && jtag_device_ctx=="jsn-TUL-1234-tulA-23727093-0"}
+fpga -file D:/desktop/2021-FPGA-Test-Dir/Lab5-DSP_HW/TestInstLat/TestInstLat/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/desktop/2021-FPGA-Test-Dir/Lab5-DSP_HW/TestInstLat/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/desktop/2021-FPGA-Test-Dir/Lab5-DSP_HW/TestInstLat/TestInstLat/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/desktop/2021-FPGA-Test-Dir/Lab5-DSP_HW/TestInstLat/TestInstLat/Debug/TestInstLat.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+11:56:59 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:56:59 INFO  : 'con' command is executed.
+11:56:59 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+11:56:59 INFO  : Disconnected from the channel tcfchan#9.
+11:57:35 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:57:36 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+11:57:36 INFO  : 'jtag frequency' command is executed.
+11:57:36 INFO  : Context for 'APU' is selected.
+11:57:36 INFO  : System reset is completed.
+11:57:39 INFO  : 'after 3000' command is executed.
+11:57:39 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0 && jtag_device_ctx=="jsn-TUL-1234-tulA-23727093-0"}' command is executed.
+11:57:41 INFO  : Device configured successfully with "D:/desktop/2021-FPGA-Test-Dir/Lab5-DSP_HW/TestInstLat/TestInstLat2/_ide/bitstream/design_1_wrapper.bit"
+11:57:41 INFO  : Context for 'APU' is selected.
+11:57:41 INFO  : Hardware design and registers information is loaded from 'D:/desktop/2021-FPGA-Test-Dir/Lab5-DSP_HW/TestInstLat/design_1_wrapper_1/export/design_1_wrapper_1/hw/design_1_wrapper.xsa'.
+11:57:41 INFO  : 'configparams force-mem-access 1' command is executed.
+11:57:41 INFO  : Context for 'APU' is selected.
+11:57:41 INFO  : Sourcing of 'D:/desktop/2021-FPGA-Test-Dir/Lab5-DSP_HW/TestInstLat/TestInstLat2/_ide/psinit/ps7_init.tcl' is done.
+11:57:42 INFO  : 'ps7_init' command is executed.
+11:57:42 INFO  : 'ps7_post_config' command is executed.
+11:57:42 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:57:42 INFO  : The application 'D:/desktop/2021-FPGA-Test-Dir/Lab5-DSP_HW/TestInstLat/TestInstLat2/Debug/TestInstLat2.elf' is downloaded to processor 'ps7_cortexa9_0'.
+11:57:42 INFO  : 'configparams force-mem-access 0' command is executed.
+11:57:42 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0 && jtag_device_ctx=="jsn-TUL-1234-tulA-23727093-0"}
+fpga -file D:/desktop/2021-FPGA-Test-Dir/Lab5-DSP_HW/TestInstLat/TestInstLat2/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/desktop/2021-FPGA-Test-Dir/Lab5-DSP_HW/TestInstLat/design_1_wrapper_1/export/design_1_wrapper_1/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/desktop/2021-FPGA-Test-Dir/Lab5-DSP_HW/TestInstLat/TestInstLat2/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/desktop/2021-FPGA-Test-Dir/Lab5-DSP_HW/TestInstLat/TestInstLat2/Debug/TestInstLat2.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+11:57:42 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:57:42 INFO  : 'con' command is executed.
+11:57:42 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+11:57:42 INFO  : Disconnected from the channel tcfchan#10.
+11:58:38 INFO  : Checking for BSP changes to sync application flags for project 'TestInstLat2'...
+11:58:47 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:58:48 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+11:58:48 INFO  : 'jtag frequency' command is executed.
+11:58:48 INFO  : Context for 'APU' is selected.
+11:58:48 INFO  : System reset is completed.
+11:58:51 INFO  : 'after 3000' command is executed.
+11:58:51 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0 && jtag_device_ctx=="jsn-TUL-1234-tulA-23727093-0"}' command is executed.
+11:58:53 INFO  : Device configured successfully with "D:/desktop/2021-FPGA-Test-Dir/Lab5-DSP_HW/TestInstLat/TestInstLat2/_ide/bitstream/design_1_wrapper.bit"
+11:58:53 INFO  : Context for 'APU' is selected.
+11:58:53 INFO  : Hardware design and registers information is loaded from 'D:/desktop/2021-FPGA-Test-Dir/Lab5-DSP_HW/TestInstLat/design_1_wrapper_1/export/design_1_wrapper_1/hw/design_1_wrapper.xsa'.
+11:58:53 INFO  : 'configparams force-mem-access 1' command is executed.
+11:58:53 INFO  : Context for 'APU' is selected.
+11:58:53 INFO  : Sourcing of 'D:/desktop/2021-FPGA-Test-Dir/Lab5-DSP_HW/TestInstLat/TestInstLat2/_ide/psinit/ps7_init.tcl' is done.
+11:58:54 INFO  : 'ps7_init' command is executed.
+11:58:54 INFO  : 'ps7_post_config' command is executed.
+11:58:54 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:58:54 INFO  : The application 'D:/desktop/2021-FPGA-Test-Dir/Lab5-DSP_HW/TestInstLat/TestInstLat2/Debug/TestInstLat2.elf' is downloaded to processor 'ps7_cortexa9_0'.
+11:58:54 INFO  : 'configparams force-mem-access 0' command is executed.
+11:58:54 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0 && jtag_device_ctx=="jsn-TUL-1234-tulA-23727093-0"}
+fpga -file D:/desktop/2021-FPGA-Test-Dir/Lab5-DSP_HW/TestInstLat/TestInstLat2/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/desktop/2021-FPGA-Test-Dir/Lab5-DSP_HW/TestInstLat/design_1_wrapper_1/export/design_1_wrapper_1/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/desktop/2021-FPGA-Test-Dir/Lab5-DSP_HW/TestInstLat/TestInstLat2/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/desktop/2021-FPGA-Test-Dir/Lab5-DSP_HW/TestInstLat/TestInstLat2/Debug/TestInstLat2.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+11:58:54 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:58:54 INFO  : 'con' command is executed.
+11:58:54 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+11:58:54 INFO  : Disconnected from the channel tcfchan#11.
+12:01:18 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:01:18 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+12:01:18 INFO  : 'jtag frequency' command is executed.
+12:01:18 INFO  : Context for 'APU' is selected.
+12:01:18 INFO  : System reset is completed.
+12:01:21 INFO  : 'after 3000' command is executed.
+12:01:21 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0 && jtag_device_ctx=="jsn-TUL-1234-tulA-23727093-0"}' command is executed.
+12:01:23 INFO  : Device configured successfully with "D:/desktop/2021-FPGA-Test-Dir/Lab5-DSP_HW/TestInstLat/TestInstLat2/_ide/bitstream/design_1_wrapper.bit"
+12:01:23 INFO  : Context for 'APU' is selected.
+12:01:23 INFO  : Hardware design and registers information is loaded from 'D:/desktop/2021-FPGA-Test-Dir/Lab5-DSP_HW/TestInstLat/design_1_wrapper_1/export/design_1_wrapper_1/hw/design_1_wrapper.xsa'.
+12:01:23 INFO  : 'configparams force-mem-access 1' command is executed.
+12:01:23 INFO  : Context for 'APU' is selected.
+12:01:23 INFO  : Sourcing of 'D:/desktop/2021-FPGA-Test-Dir/Lab5-DSP_HW/TestInstLat/TestInstLat2/_ide/psinit/ps7_init.tcl' is done.
+12:01:24 INFO  : 'ps7_init' command is executed.
+12:01:24 INFO  : 'ps7_post_config' command is executed.
+12:01:24 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:01:24 INFO  : The application 'D:/desktop/2021-FPGA-Test-Dir/Lab5-DSP_HW/TestInstLat/TestInstLat2/Debug/TestInstLat2.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:01:24 INFO  : 'configparams force-mem-access 0' command is executed.
+12:01:24 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0 && jtag_device_ctx=="jsn-TUL-1234-tulA-23727093-0"}
+fpga -file D:/desktop/2021-FPGA-Test-Dir/Lab5-DSP_HW/TestInstLat/TestInstLat2/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/desktop/2021-FPGA-Test-Dir/Lab5-DSP_HW/TestInstLat/design_1_wrapper_1/export/design_1_wrapper_1/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/desktop/2021-FPGA-Test-Dir/Lab5-DSP_HW/TestInstLat/TestInstLat2/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/desktop/2021-FPGA-Test-Dir/Lab5-DSP_HW/TestInstLat/TestInstLat2/Debug/TestInstLat2.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+12:01:24 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:01:24 INFO  : 'con' command is executed.
+12:01:24 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+12:01:24 INFO  : Disconnected from the channel tcfchan#12.
+12:02:22 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:02:22 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+12:02:22 INFO  : 'jtag frequency' command is executed.
+12:02:22 INFO  : Context for 'APU' is selected.
+12:02:22 INFO  : System reset is completed.
+12:02:25 INFO  : 'after 3000' command is executed.
+12:02:25 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0 && jtag_device_ctx=="jsn-TUL-1234-tulA-23727093-0"}' command is executed.
+12:02:28 INFO  : Device configured successfully with "D:/desktop/2021-FPGA-Test-Dir/Lab5-DSP_HW/TestInstLat/TestInstLat2/_ide/bitstream/design_1_wrapper.bit"
+12:02:28 INFO  : Context for 'APU' is selected.
+12:02:28 INFO  : Hardware design and registers information is loaded from 'D:/desktop/2021-FPGA-Test-Dir/Lab5-DSP_HW/TestInstLat/design_1_wrapper_1/export/design_1_wrapper_1/hw/design_1_wrapper.xsa'.
+12:02:28 INFO  : 'configparams force-mem-access 1' command is executed.
+12:02:28 INFO  : Context for 'APU' is selected.
+12:02:28 INFO  : Sourcing of 'D:/desktop/2021-FPGA-Test-Dir/Lab5-DSP_HW/TestInstLat/TestInstLat2/_ide/psinit/ps7_init.tcl' is done.
+12:02:28 INFO  : 'ps7_init' command is executed.
+12:02:28 INFO  : 'ps7_post_config' command is executed.
+12:02:28 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:02:28 INFO  : The application 'D:/desktop/2021-FPGA-Test-Dir/Lab5-DSP_HW/TestInstLat/TestInstLat2/Debug/TestInstLat2.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:02:28 INFO  : 'configparams force-mem-access 0' command is executed.
+12:02:28 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0 && jtag_device_ctx=="jsn-TUL-1234-tulA-23727093-0"}
+fpga -file D:/desktop/2021-FPGA-Test-Dir/Lab5-DSP_HW/TestInstLat/TestInstLat2/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/desktop/2021-FPGA-Test-Dir/Lab5-DSP_HW/TestInstLat/design_1_wrapper_1/export/design_1_wrapper_1/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/desktop/2021-FPGA-Test-Dir/Lab5-DSP_HW/TestInstLat/TestInstLat2/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/desktop/2021-FPGA-Test-Dir/Lab5-DSP_HW/TestInstLat/TestInstLat2/Debug/TestInstLat2.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+12:02:28 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:02:28 INFO  : 'con' command is executed.
+12:02:28 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+12:02:28 INFO  : Disconnected from the channel tcfchan#13.
+12:04:17 ERROR : An unexpected exception occurred in the module 'reading platform'
+12:04:22 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:04:22 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+12:04:22 INFO  : 'jtag frequency' command is executed.
+12:04:22 INFO  : Context for 'APU' is selected.
+12:04:22 INFO  : System reset is completed.
+12:04:25 INFO  : 'after 3000' command is executed.
+12:04:25 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0 && jtag_device_ctx=="jsn-TUL-1234-tulA-23727093-0"}' command is executed.
+12:04:28 INFO  : Device configured successfully with "D:/desktop/2021-FPGA-Test-Dir/Lab5-DSP_HW/TestInstLat/TestInstLat2/_ide/bitstream/design_1_wrapper.bit"
+12:04:28 INFO  : Context for 'APU' is selected.
+12:04:28 INFO  : Hardware design and registers information is loaded from 'D:/desktop/2021-FPGA-Test-Dir/Lab5-DSP_HW/TestInstLat/design_1_wrapper_1/export/design_1_wrapper_1/hw/design_1_wrapper.xsa'.
+12:04:28 INFO  : 'configparams force-mem-access 1' command is executed.
+12:04:28 INFO  : Context for 'APU' is selected.
+12:04:28 INFO  : Sourcing of 'D:/desktop/2021-FPGA-Test-Dir/Lab5-DSP_HW/TestInstLat/TestInstLat2/_ide/psinit/ps7_init.tcl' is done.
+12:04:28 INFO  : 'ps7_init' command is executed.
+12:04:28 INFO  : 'ps7_post_config' command is executed.
+12:04:28 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:04:28 INFO  : The application 'D:/desktop/2021-FPGA-Test-Dir/Lab5-DSP_HW/TestInstLat/TestInstLat2/Debug/TestInstLat2.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:04:28 INFO  : 'configparams force-mem-access 0' command is executed.
+12:04:28 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0 && jtag_device_ctx=="jsn-TUL-1234-tulA-23727093-0"}
+fpga -file D:/desktop/2021-FPGA-Test-Dir/Lab5-DSP_HW/TestInstLat/TestInstLat2/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/desktop/2021-FPGA-Test-Dir/Lab5-DSP_HW/TestInstLat/design_1_wrapper_1/export/design_1_wrapper_1/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/desktop/2021-FPGA-Test-Dir/Lab5-DSP_HW/TestInstLat/TestInstLat2/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/desktop/2021-FPGA-Test-Dir/Lab5-DSP_HW/TestInstLat/TestInstLat2/Debug/TestInstLat2.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+12:04:28 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:04:28 INFO  : 'con' command is executed.
+12:04:28 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+12:04:28 INFO  : Disconnected from the channel tcfchan#14.

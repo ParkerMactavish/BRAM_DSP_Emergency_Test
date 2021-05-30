@@ -1,0 +1,32 @@
+11:58:38 **** Incremental Build of configuration Debug for project TestInstLat2 ****
+make all 
+make --no-print-directory pre-build
+a9-linaro-pre-build-step
+' '
+make --no-print-directory main-build
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -ID:/desktop/2021-FPGA-Test-Dir/Lab5-DSP_HW/TestInstLat/design_1_wrapper_1/export/design_1_wrapper_1/sw/design_1_wrapper_1/standalone_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:62:12: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+   62 |   printf("%d\n", XGpio_DiscreteRead(&inst_gpio, 2));
+      |           ~^     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |            |     |
+      |            int   u32 {aka long unsigned int}
+      |           %ld
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: TestInstLat2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LD:/desktop/2021-FPGA-Test-Dir/Lab5-DSP_HW/TestInstLat/design_1_wrapper_1/export/design_1_wrapper_1/sw/design_1_wrapper_1/standalone_ps7_cortexa9_0/bsplib/lib -o "TestInstLat2.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: TestInstLat2.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size TestInstLat2.elf  |tee "TestInstLat2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  49660	   2564	  22640	  74864	  12470	TestInstLat2.elf
+'Finished building: TestInstLat2.elf.size'
+' '
+
+11:58:39 Build Finished (took 728ms)
+

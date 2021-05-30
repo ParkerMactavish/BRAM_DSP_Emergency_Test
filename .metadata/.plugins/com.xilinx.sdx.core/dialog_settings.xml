@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
-	<item key="sdx.custom.platform.repository.locations" value="D:\desktop\2021-FPGA-Test-Dir\Lab5-DSP_HW\Test1;D:\desktop\2021-FPGA-Test-Dir\Lab5-DSP_HW\design_1_wrapper\export\design_1_wrapper"/>
+	<item key="sdx.custom.platform.repository.locations" value="D:\desktop\2021-FPGA-Test-Dir\Lab5-DSP_HW\Test1;D:\desktop\2021-FPGA-Test-Dir\Lab5-DSP_HW\design_1_wrapper\export\design_1_wrapper;D:\desktop\2021-FPGA-Test-Dir\Lab5-DSP_HW\design_1_wrapper_1\export\design_1_wrapper_1"/>
 </section>
