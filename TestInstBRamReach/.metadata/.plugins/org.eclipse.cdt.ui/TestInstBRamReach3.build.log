@@ -1,0 +1,40 @@
+05:21:09 **** Incremental Build of configuration Debug for project TestInstBRamReach3 ****
+make all 
+make --no-print-directory pre-build
+a9-linaro-pre-build-step
+' '
+make --no-print-directory main-build
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -ID:/desktop/2021-FPGA-Test-Dir/Lab5-DSP_HW/TestInstBRamReach/design_1_wrapper_2/export/design_1_wrapper_2/sw/design_1_wrapper_2/standalone_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:67:16: warning: format '%x' expects argument of type 'unsigned int', but argument 3 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+   67 |   printf("%d: %x\n", i, Xil_In32(XPAR_AXI_BRAM_CTRL_1_S_AXI_BASEADDR + (i << 2)));
+      |               ~^        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                |        |
+      |                |        u32 {aka long unsigned int}
+      |                unsigned int
+      |               %lx
+../src/helloworld.c:79:16: warning: format '%x' expects argument of type 'unsigned int', but argument 3 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+   79 |   printf("%d: %x\n", i, Xil_In32(XPAR_AXI_BRAM_CTRL_1_S_AXI_BASEADDR + (i << 2)));
+      |               ~^        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                |        |
+      |                |        u32 {aka long unsigned int}
+      |                unsigned int
+      |               %lx
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: TestInstBRamReach3.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LD:/desktop/2021-FPGA-Test-Dir/Lab5-DSP_HW/TestInstBRamReach/design_1_wrapper_2/export/design_1_wrapper_2/sw/design_1_wrapper_2/standalone_ps7_cortexa9_0/bsplib/lib -o "TestInstBRamReach3.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: TestInstBRamReach3.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size TestInstBRamReach3.elf  |tee "TestInstBRamReach3.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  50424	   2580	  22640	  75644	  1277c	TestInstBRamReach3.elf
+'Finished building: TestInstBRamReach3.elf.size'
+' '
+
+05:21:10 Build Finished (took 1s.10ms)
+

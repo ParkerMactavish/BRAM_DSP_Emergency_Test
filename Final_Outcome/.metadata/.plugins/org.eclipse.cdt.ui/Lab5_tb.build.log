@@ -1,0 +1,40 @@
+07:47:15 **** Incremental Build of configuration Debug for project Lab5_tb ****
+make all 
+make --no-print-directory pre-build
+a9-linaro-pre-build-step
+' '
+make --no-print-directory main-build
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -ID:/desktop/2021-FPGA-Test-Dir/Lab5-DSP_HW/Final_Outcome/Final_Outcome0/export/Final_Outcome0/sw/Final_Outcome0/standalone_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:20:16: warning: format '%x' expects argument of type 'unsigned int', but argument 3 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+   20 |   printf("%d: %x\n", i, Xil_In32(XPAR_AXI_BRAM_CTRL_1_S_AXI_BASEADDR + (i << 2)));
+      |               ~^        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                |        |
+      |                |        u32 {aka long unsigned int}
+      |                unsigned int
+      |               %lx
+../src/helloworld.c:33:16: warning: format '%x' expects argument of type 'unsigned int', but argument 3 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+   33 |   printf("%d: %x\n", i, Xil_In32(XPAR_AXI_BRAM_CTRL_1_S_AXI_BASEADDR + (i << 2)));
+      |               ~^        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                |        |
+      |                |        u32 {aka long unsigned int}
+      |                unsigned int
+      |               %lx
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Lab5_tb.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LD:/desktop/2021-FPGA-Test-Dir/Lab5-DSP_HW/Final_Outcome/Final_Outcome0/export/Final_Outcome0/sw/Final_Outcome0/standalone_ps7_cortexa9_0/bsplib/lib -o "Lab5_tb.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Lab5_tb.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Lab5_tb.elf  |tee "Lab5_tb.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  50424	   2580	  22640	  75644	  1277c	Lab5_tb.elf
+'Finished building: Lab5_tb.elf.size'
+' '
+
+07:47:15 Build Finished (took 726ms)
+

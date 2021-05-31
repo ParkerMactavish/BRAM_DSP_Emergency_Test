@@ -85,7 +85,7 @@ DSP48E1_inst (
 	.CED(0), // 1-bit input: Clock enable input for DREG
 	.CEINMODE(1), // 1-bit input: Clock enable input for INMODEREG
 	.CEM(1), // 1-bit input: Clock enable input for MREG
-	.CEP(0), // 1-bit input: Clock enable input for PREG
+	.CEP(1), // 1-bit input: Clock enable input for PREG
 	.RSTA(0), // 1-bit input: Reset input for AREG
 	.RSTALLCARRYIN(0), // 1-bit input: Reset input for CARRYINREG
 	.RSTALUMODE(0), // 1-bit input: Reset input for ALUMODEREG

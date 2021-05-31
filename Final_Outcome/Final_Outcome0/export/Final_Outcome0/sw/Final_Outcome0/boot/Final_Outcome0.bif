@@ -1,0 +1,7 @@
+/*Final_Outcome0*/
+the_ROM_image:
+{
+  [bootloader]<Final_Outcome0/boot/fsbl.elf>
+   <bitstream> 
+  <elf,ps7_cortexa9_0>
+}
